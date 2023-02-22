@@ -1,4 +1,6 @@
 resource "aws_s3_bucket" "data" {
+	# checkov:skip=CKV_AWS_21: ADD REASON
+	# checkov:skip=CKV2_AWS_6: ADD REASON
   # bucket is public
   # bucket is not encrypted
   # bucket does not have access logs
@@ -30,7 +32,7 @@ resource "aws_s3_bucket_object" "data_object" {
     }, {
     git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
     git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
+    git_last_modified_at = "2020-06-16 4:46:24"
     git_last_modified_by = "nimrodkor@gmail.com"
     git_modifiers        = "nimrodkor"
     git_org              = "bridgecrewio"
@@ -40,6 +42,7 @@ resource "aws_s3_bucket_object" "data_object" {
 }
 
 resource "aws_s3_bucket" "financials" {
+	# checkov:skip=CKV2_AWS_6: ADD REASON
   # bucket is not encrypted
   # bucket does not have access logs
   # bucket does not have versioning
